@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miles to Kilometers</title>
+    <link href="https://fonts.googleapis.com/css?family=Kelly+Slab|Acme&display=swap" rel="stylesheet">
+    <link href="stylesheets/stylesheet.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Miles to Kilometers Converter</h1>
+
+    <input type="button" value="Convert 1-50" onclick="converter(1, 50)">
+    <input type="button" value="Convert 51-100" onclick="converter(51, 100)">
+    <input type="button" value="Convert 101-150" onclick="converter(101, 150)">
+    <input type="button" value="Convert 151-200" onclick="converter(151, 200)">
+
+
+        <script>
+
+
+            function converter(from, to) {
+
+                document.write("<link href='stylesheets/stylesheet.css' rel='stylesheet'>")
+                document.write("<h1>Miles to Kilometers Converter</h1>")
+                document.write(`
+                    <input type='button' value='Back' onclick="location.reload()">
+                    <table ; border='1' style='color: midnightblue'>
+                    <tr>
+                    <th>Mile</th>
+                    <th>Kilometer</th>
+                    </tr>`)
+
+                for (let i = from; i <= to; i++) {
+                    let km = (i * 1.60934).toFixed(1)
+                    document.write("<tr><td>" + i.toString() + "</td><td>" + km + "</td></tr>")
+                }
+            }
+
+        </script>
+    </table>
+</body>
+</html>
